@@ -25,7 +25,7 @@ int main(){
     textdomain("calculadora");
     int option = -1 , result;
     float resultDecimal;
-    cout << _("Se ha añadido la opción de elegir idioma en este programa\n");
+    cout << _("Se ha anydido la opción de elegir idioma en este programa\n");
     while(option != 0){
         cout << _("Introduzca que desea:\n");
         cout << _("Opcion 0: Salir de la calculadora\n");
