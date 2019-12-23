@@ -1,6 +1,7 @@
 #include<iostream>
 #include <libintl.h>
 #include<string>
+#include <math.h>
 
 #define _(STRING) gettext(STRING)
 
@@ -17,6 +18,8 @@ float funcionMultiplicacionDecimal();
 int funcionDivision();
 float funcionDivisionDecimal();
 void menuMain(int );
+float funcionRaizDecimal();
+int funcionRaiz();
 
 int main(){
     //Inicialización gettext
@@ -56,6 +59,7 @@ void menuMain(int opcionDecimalOentera){
     cout<< _("2. Resta\n");
     cout << _("3. Multiplicacion\n");
     cout << _("4. División\n");
+    cout << _("5. Raiz cuadrada\n");
     cout << "------------------------------------\n";
     cin >> option;
     switch (option)
@@ -74,45 +78,60 @@ void menuMain(int opcionDecimalOentera){
             }
             break;
         case 2:
-        if(opcionDecimalOentera == 1){
-            result =  funcionResta();
-            cout << "*****************************************\n";
-            cout << _("El resultado de la operacion resta es : ") << result <<"\n\n";
-            cout << "*****************************************\n";
-        }else{
-            resultDecimal = funcionRestaDecimal();
-            cout << "*****************************************\n";
-            cout << _("El resultado de la operacion resta es : ") << resultDecimal <<"\n\n";
-            cout << "*****************************************\n";
-        }
+            if(opcionDecimalOentera == 1){
+                result =  funcionResta();
+                cout << "*****************************************\n";
+                cout << _("El resultado de la operacion resta es : ") << result <<"\n\n";
+                cout << "*****************************************\n";
+            }else{
+                resultDecimal = funcionRestaDecimal();
+                cout << "*****************************************\n";
+                cout << _("El resultado de la operacion resta es : ") << resultDecimal <<"\n\n";
+                cout << "*****************************************\n";
+            }
             break;
         case 3:
-        if(opcionDecimalOentera == 1){
-            result = funcionMultiplicacion();
-            cout << "*****************************************\n";
-            cout << _("El resultado de la operacion multiplicación es : ") << result <<"\n\n";
-            cout << "*****************************************\n";
-        }else{
-            resultDecimal = funcionMultiplicacionDecimal();
-            cout << "*****************************************\n";
-            cout << _("El resultado de la operacion multiplicación es : ") << resultDecimal <<"\n\n";
-            cout << "*****************************************\n";
-        }
+            if(opcionDecimalOentera == 1){
+                result = funcionMultiplicacion();
+                cout << "*****************************************\n";
+                cout << _("El resultado de la operacion multiplicación es : ") << result <<"\n\n";
+                cout << "*****************************************\n";
+            }else{
+                resultDecimal = funcionMultiplicacionDecimal();
+                cout << "*****************************************\n";
+                cout << _("El resultado de la operacion multiplicación es : ") << resultDecimal <<"\n\n";
+                cout << "*****************************************\n";
+            }
 
             break;
 
         case 4:
-        if(opcionDecimalOentera == 1){
-            result = funcionDivision();
-            cout << "*****************************************\n";
-            cout << _("El resultado de la operacion división es : ") << result <<"\n\n";
-            cout << "*****************************************\n";
-        }else{
-            resultDecimal = funcionDivisionDecimal();
-            cout << "*****************************************\n";
-            cout << _("El resultado de la operacion división es : ")<< resultDecimal <<"\n\n";
-            cout << "*****************************************\n";
-        }
+            if(opcionDecimalOentera == 1){
+                result = funcionDivision();
+                cout << "*****************************************\n";
+                cout << _("El resultado de la operacion división es : ") << result <<"\n\n";
+                cout << "*****************************************\n";
+            }else{
+                resultDecimal = funcionDivisionDecimal();
+                cout << "*****************************************\n";
+                cout << _("El resultado de la operacion división es : ")<< resultDecimal <<"\n\n";
+                cout << "*****************************************\n";
+            }
+
+            break;
+            
+        case 5:
+            if(opcionDecimalOentera == 1){
+                result = funcionRaiz();
+                cout << "*****************************************\n";
+                cout << _("El resultado de la raiz cuadrada es : ") << result <<"\n\n";
+                cout << "*****************************************\n";
+            }else{
+                resultDecimal = funcionRaizDecimal();
+                cout << "*****************************************\n";
+                cout << _("El resultado de la raiz cuadrada es : ") << resultDecimal <<"\n\n";
+                cout << "*****************************************\n";
+            }
 
             break;
         default:
@@ -131,6 +150,21 @@ int funcionDivision(){
     cin >> segundoOperando;
     return primerOperando / segundoOperando;
 }
+
+int funcionRaiz(){
+    int numero;
+    cout << _("Introduce el elemento\n");
+    cin >> numero;
+    return sqrt(numero);
+}
+
+float funcionRaizDecimal(){
+    int numero;
+    cout << _("Introduce el elemento\n");
+    cin >> numero;
+    return sqrt(numero);
+}
+
 
 float funcionDivisionDecimal(){
     float primerOperando , segundoOperando;
