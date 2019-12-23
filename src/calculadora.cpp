@@ -109,7 +109,7 @@ void menuMain(int opcionDecimalOentera){
             if(opcionDecimalOentera == 1){
                 result = funcionDivision();
                 cout << "*****************************************\n";
-                cout << _("El resultado de la operacion división es : ") << result <<"\n\n";
+                cout << _("El resultado de la operación división es : ") << result <<"\n\n";
                 cout << "*****************************************\n";
             }else{
                 resultDecimal = funcionDivisionDecimal();
