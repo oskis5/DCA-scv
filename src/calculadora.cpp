@@ -114,7 +114,7 @@ void menuMain(int opcionDecimalOentera){
             }else{
                 resultDecimal = funcionDivisionDecimal();
                 cout << "*****************************************\n";
-                cout << _("El resultado de la operacion división es : ")<< resultDecimal <<"\n\n";
+                cout << _("El resultado de la operación división es : ")<< resultDecimal <<"\n\n";
                 cout << "*****************************************\n";
             }
 
@@ -125,7 +125,7 @@ void menuMain(int opcionDecimalOentera){
             if(opcionDecimalOentera == 1){
                 result = funcionDivision();
                 cout << "*****************************************\n";
-                cout << _("El resultado de la raiz cuadrada es : ") << result <<"\n\n";
+                cout << _("El resultado de la división es : ") << result <<"\n\n";
                 cout << "*****************************************\n";
             }else{
                 resultDecimal = funcionRaizDecimal();
