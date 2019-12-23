@@ -121,9 +121,9 @@ void menuMain(int opcionDecimalOentera){
             break;
             
         case 5:
-        //Se añade error al llamar a función
+        //Se corrige error
             if(opcionDecimalOentera == 1){
-                result = funcionDivision();
+                result = funcionRaiz();
                 cout << "*****************************************\n";
                 cout << _("El resultado de la división es : ") << result <<"\n\n";
                 cout << "*****************************************\n";
